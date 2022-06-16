@@ -7,6 +7,7 @@ namespace CRUD_ENITY.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
             public DbSet<User> Users { get; set; }
-        }
+                  
+    }
     
 }

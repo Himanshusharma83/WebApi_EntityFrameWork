@@ -1,13 +1,15 @@
 ﻿
 
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace CRUD_ENITY
 {
-    [Keyless]
+ 
 
     public class User    {
-       
+
+        [Key]
         public int DepartmentId { get; set; } 
         public string DepartmentName { get; set; } = string.Empty;
 

@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace CRUD_ENITY.Migrations
 {
-    public partial class CreateInitial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,8 +13,9 @@ namespace CRUD_ENITY.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    DepartmentId = table.Column<int>(type: "integer", nullable: false),
-                    DepartmentName = table.Column<string>(type: "text", nullable: false)
+                    DepartmentId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+   DepartmentName = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
