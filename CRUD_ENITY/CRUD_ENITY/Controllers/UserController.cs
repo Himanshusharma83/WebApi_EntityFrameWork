@@ -60,8 +60,3 @@ namespace CRUD_ENITY.Controllers
     }
 }
 
-/*
-var hero = 
-if (hero == null)
-    return BadRequest("Not Found");
-return Ok(hero);*/
